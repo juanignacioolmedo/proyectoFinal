@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slider manual infinito con Jquery</title> 
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="css/hoverText.css"> 
+  <link rel="stylesheet" href="css/tabla.css"> 
+</head>
+
+<body>
+
+  <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+    <a class="navbar-brand" style="text-align: right" href="#">Logotipo</a>
+    <a class="navbar-brand" style="text-align: right" href="#">AAA</a>
+    <a class="navbar-brand" style="text-align: right" href="#">BBB</a>
+    <a class="navbar-brand" style="text-align: right" href="#">CCC</a>
+  </nav>
+<!-- hacer barra de inicio/nav con menu-->
+<!-- esto hacerlo en el header -->
+  <div class="container">
+
+    <div id="contenedor-slider" class="contenedor-slider">
+      
+      <div id="slider" class="slider">
+        <section class="slider__section">
+
+        <!--
+          <a href="#" class="wrapper">
+            <span class="text">
+                14
+            </span>
+            <img src="http://lorempixel.com/100/100">
+         </a>
+        -->
+                  
+          <input type="image" src="http://welltechnically.com/wp-content/uploads/2013/08/android-wallpapers-700x300.jpg"   onclick="saludameEsta()" name="saveForm" class="slider__img " />
+          
+
+          <!--<img src="http://welltechnically.com/wp-content/uploads/2013/08/android-wallpapers-700x300.jpg" > -->
+        </section>
+        <section class="slider__section">
+          <img src="http://pgembeddedsystems.org/images/vlsifront.png" 
+              class="slider__img">
+        </section>
+        <section class="slider__section">
+          <img src="http://welltechnically.com/wp-content/uploads/2013/09/android-widescreen-wallpaper-14165-hd-wallpapers-700x300.jpg" class="slider__img">
+        </section>
+        <section class="slider__section">
+          <img src="http://youghaltennisclub.ie/wp-content/uploads/2014/06/Tennis-Wallpaper-High-Definition-700x300.jpg" class="slider__img">
+          </section>
+      </div>
+
+      <div id="btn-prev" class="btn-prev">&#60;</div>
+      <div id="btn-next" class="btn-next">&#62;</div>
+
+    </div>
+
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!--
+    <div>  
+          <h2 align="center">Search HTML Table Data by using JQuery</h2>  
+          <h3 align="center">Employee Data</h3>                 
+          <br /><br />  
+          <div align="center">  
+               <input type="text" name="search" id="search" class="form-control" /> 
+               <input type="number" name="hasta" id="hasta" class="form-control" />
+               <input type="number" name="desde" id="desde" class="form-control" />
+          </div>  
+          <br /><br />  
+          <div class="table-responsive" >  
+               <table class="table table-bordered" id="employee_table">  
+                    <tr>  
+                         <th width="5%">ID</th>  
+                         <th width="25%">Name</th>  
+                         <th width="35%">Address</th>  
+                         <th width="10%">Gender</th>  
+                         <th width="20%">Designation</th>  
+                         <th width="5%">Age</th>  
+                    </tr>  
+                    <tr>  
+                         <td>175</td>  
+                         <td>Ronald D. Colella</td>  
+                         <td>1571 Bingamon Branch Road, Barrington, IL 60010</td>  
+                         <td>Male</td>  
+                         <td>Top executive</td>  
+                         <td>32</td>  
+                    </tr> 
+                    <tr>  
+                         <td>170</td>  
+                         <td>Patricia R. Lohman</td>  
+                         <td>2653 Courtright Street, Garrison, ND 58540</td>  
+                         <td>Female</td>  
+                         <td>Counseling psychologist</td>  
+                         <td>24</td>  
+                    </tr>  
+                    <tr>  
+                         <td>169</td>  
+                         <td>Lee H. Young</td>  
+                         <td>4097 Cambridge Place, Cockeysville, MD 21030</td>  
+                         <td>Male</td>  
+                         <td>Refractory mason</td>  
+                         <td>24</td>  
+                    </tr>  
+                    <tr>  
+                         <td>168</td>  
+                         <td>Melina T. Reza</td>  
+                         <td>68 Elk Creek Road, Chamblee, GA 30341</td>  
+                         <td>Female</td>  
+                         <td>Manpower development manager</td>  
+                         <td>40</td>  
+                    </tr>  
+                    <tr>  
+                         <td>167</td>  
+                         <td>Sandra P. Swain</td>  
+                         <td>3563 Wolf Pen Road, San Jose, CA 95134</td>  
+                         <td>Female</td>  
+                         <td>Mortgage banker</td>  
+                         <td>32</td>  
+                    </tr>  
+                    <tr>  
+                         <td>166</td>  
+                         <td>Thomas K. Herrman</td>  
+                         <td>4342 Despard Street, Atlanta, GA 30331</td>  
+                         <td>Male</td>  
+                         <td>Scientific photographer</td>  
+                         <td>47</td>  
+                    </tr>  
+                    <tr>  
+                         <td>165</td>  
+                         <td>Nick M. Gilligan</td>  
+                         <td>4951 North Bend River Road, Lexington, KY 40505</td>  
+                         <td>Male</td>  
+                         <td>Supply manager</td>  
+                         <td>42</td>  
+                    </tr>  
+                    <tr>  
+                         <td>164</td>  
+                         <td>Ronald S. Keefe</td>  
+                         <td>4388 Goff Avenue, Grand Rapids, MI 49508</td>  
+                         <td>Male</td>  
+                         <td>Landscaping worker</td>  
+                         <td>22</td>  
+                    </tr>  
+                    <tr>  
+                         <td>163</td>  
+                         <td>William C. Wright</td>  
+                         <td>2653 Pyramid Valley Road, Cedar Rapids, IA 52404</td>  
+                         <td>Male</td>  
+                         <td>Political geographer</td>  
+                         <td>33</td>  
+                    </tr>  
+                                             <tr>  
+                         <td>162</td>  
+                         <td>Jarrod D. Jones</td>  
+                         <td>3827 Bingamon Road, Garfield Heights, OH 44125</td>  
+                         <td>Male</td>  
+                         <td>Manpower development advisor</td>  
+                         <td>64</td>  
+                    </tr>  
+                    <tr>  
+                         <td>161</td>  
+                         <td>Glenda J. Stewart</td>  
+                         <td>3482 Pursglove Court, Rossburg, OH 45362</td>  
+                         <td>Female</td>  
+                         <td>Cost consultant</td>  
+                         <td>28</td>  
+                    </tr>  
+                    <tr>  
+                         <td>8</td>  
+                         <td>Charles D. Horst</td>  
+                         <td>1636 Walnut Hill Drive Cincinnati, OH 45202</td>  
+                         <td>Male</td>  
+                         <td>Financial investigator</td>  
+                         <td>29</td>  
+                    </tr>  
+                    <tr>  
+                         <td>7</td>  
+                         <td>Antonio J. Forbes</td>  
+                         <td>403 Snyder Avenue Charlotte, NC 28208</td>  
+                         <td>Male</td>  
+                         <td>Faller</td>  
+                         <td>32</td>  
+                    </tr>  
+                    <tr>  
+                         <td>6</td>  
+                         <td>Barbra K. Hurley</td>  
+                         <td>1241 Canis Heights Drive Los Angeles, CA 90017</td>  
+                         <td>Female</td>  
+                         <td>Service technician</td>  
+                         <td>26</td>  
+                    </tr>  
+                    <tr>  
+                         <td>5</td>  
+                         <td>Clara Gilliam</td>  
+                         <td>63 Woodridge Lane Memphis, TN 38138</td>  
+                         <td>Female</td>  
+                         <td>Programmer</td>  
+                         <td>24</td>  
+                    </tr>  
+                    <tr>  
+                         <td>1</td>  
+                         <td>Bruce Tom</td>  
+                         <td>656 Edsel Road Sherman Oaks, CA 91403</td>  
+                         <td>Male</td>  
+                         <td>Driver</td>  
+                         <td>36</td>  
+                    </tr>  
+              </table>  
+          </div>  
+     </div> 
+  </div>
+  -->
+
+
+  <div class="container">
+  <div class="row">
+
+    <section class="content">
+      <h1>Table Filter</h1>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="pull-right">
+              <div class="btn-group">
+                <button type="button" class="btn btn-success btn-filter" data-target="pagado">Pagado</button>
+                <button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendiente</button>
+                <button type="button" class="btn btn-danger btn-filter" data-target="cancelado">Cancelado</button>
+                <button type="button" class="btn btn-default btn-filter" data-target="all">Todos</button>
+              </div>
+            </div>
+            <div class="table-container">
+              <table class="table table-filter">
+                <tbody>
+                  <tr data-status="pagado">
+                    <td>
+                      <div class="ckbox">
+                        <input type="checkbox" id="checkbox1">
+                        <label for="checkbox1"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="javascript:;" class="star">
+                        <i class="glyphicon glyphicon-star"></i>
+                      </a>
+                    </td>
+                    <td>
+                      <div class="media">
+                        <a href="#" class="pull-left">
+                          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                        </a>
+                        <div class="media-body">
+                          <span class="media-meta pull-right">Febrero 13, 2016</span>
+                          <h4 class="title">
+                            Lorem Impsum
+                            <span class="pull-right pagado">(Pagado)</span>
+                          </h4>
+                          <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-status="pendiente">
+                    <td>
+                      <div class="ckbox">
+                        <input type="checkbox" id="checkbox3">
+                        <label for="checkbox3"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="javascript:;" class="star">
+                        <i class="glyphicon glyphicon-star"></i>
+                      </a>
+                    </td>
+                    <td>
+                      <div class="media">
+                        <a href="#" class="pull-left">
+                          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                        </a>
+                        <div class="media-body">
+                          <span class="media-meta pull-right">Febrero 13, 2016</span>
+                          <h4 class="title">
+                            Lorem Impsum
+                            <span class="pull-right pendiente">(Pendiente)</span>
+                          </h4>
+                          <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-status="cancelado">
+                    <td>
+                      <div class="ckbox">
+                        <input type="checkbox" id="checkbox2">
+                        <label for="checkbox2"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="javascript:;" class="star">
+                        <i class="glyphicon glyphicon-star"></i>
+                      </a>
+                    </td>
+                    <td>
+                      <div class="media">
+                        <a href="#" class="pull-left">
+                          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                        </a>
+                        <div class="media-body">
+                          <span class="media-meta pull-right">Febrero 13, 2016</span>
+                          <h4 class="title">
+                            Lorem Impsum
+                            <span class="pull-right cancelado">(Cancelado)</span>
+                          </h4>
+                          <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-status="pagado" class="selected">
+                    <td>
+                      <div class="ckbox">
+                        <input type="checkbox" id="checkbox4" checked>
+                        <label for="checkbox4"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="javascript:;" class="star star-checked">
+                        <i class="glyphicon glyphicon-star"></i>
+                      </a>
+                    </td>
+                    <td>
+                      <div class="media">
+                        <a href="#" class="pull-left">
+                          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                        </a>
+                        <div class="media-body">
+                          <span class="media-meta pull-right">Febrero 13, 2016</span>
+                          <h4 class="title">
+                            Lorem Impsum
+                            <span class="pull-right pagado">(Pagado)</span>
+                          </h4>
+                          <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-status="pendiente">
+                    <td>
+                      <div class="ckbox">
+                        <input type="checkbox" id="checkbox5">
+                        <label for="checkbox5"></label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="javascript:;" class="star">
+                        <i class="glyphicon glyphicon-star"></i>
+                      </a>
+                    </td>
+                    <td>
+                      <div class="media">
+                        <a href="#" class="pull-left">
+                          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                        </a>
+                        <div class="media-body">
+                          <span class="media-meta pull-right">Febrero 13, 2016</span>
+                          <h4 class="title">
+                            Lorem Impsum
+                            <span class="pull-right pendiente">(Pendiente)</span>
+                          </h4>
+                          <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="content-footer">
+          <p>
+            Page © - 2016 <br>
+            Powered By <a href="https://www.facebook.com/tavo.qiqe.lucero" target="_blank">TavoQiqe</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    
+  </div>
+</div>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+  <script src="js/tether.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/ejemplo.js"></script>
+  <script src="js/tabla.js"></script>
+  <!--
+  <script src="js/buscador.js"></script>
+  -->
+
+</body>
+</html>
