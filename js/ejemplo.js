@@ -25,7 +25,7 @@ var saludameEsta = function(someText){
 
 var imagenEncordados = {
 	'luxilon': 'https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg', 
-    'zons': 'https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg' };
+    'zons': 'https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg'
 
 };
 
