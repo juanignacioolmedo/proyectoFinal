@@ -11,7 +11,7 @@ var saludameEsta = function(someText){
 	
 	swal({
 	  title: "Sweet!",
-	  imageUrl:,
+	  imageUrl: unaImagen,
 	  type: 'info',
 	  html: unHtml,
 	  showCloseButton: true,
