@@ -1,5 +1,5 @@
 .acercaDePanel {
-  /*background: #18BC9C;*/
+  background: #FF5A5F;
   color: black;
 }
 
@@ -20,5 +20,24 @@ p.small {
 	color:black;
 }
 
-.btn-success {
-	}
+/*.btn-success {
+	background-color: inherit;
+    border-color:inherit;
+}
+
+.btn-success:hover {
+	background-color: grey;
+	border-color: inherit; 
+}
+
+.btn-success:onclick{
+	background-color: olive;
+}
+
+.btn-success:active{
+    background:olive;
+}
+
+.btn-success:focus{
+    background:olive;
+}*/
