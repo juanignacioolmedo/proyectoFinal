@@ -1,11 +1,13 @@
 .acercaDePanel {
-  background: #FF5A5F;
-  color: black;
+  background: #a2b5ae;
+  color: inherit;
+  padding: 70px 70px;
 }
 
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  background-color: #F9F9F9;
 }
 p {
   font-size: 20px;
@@ -19,6 +21,11 @@ p.small {
 	background-color: transparent;
 	color:black;
 }
+
+.descripcion{
+	color:inherit;
+}
+
 
 /*.btn-success {
 	background-color: inherit;

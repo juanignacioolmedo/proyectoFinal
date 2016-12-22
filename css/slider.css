@@ -4,10 +4,11 @@
     height: 100%;
 }
 
+
 .carousel-inner {
     height: 100%;
-    background-color: #fbfbfb;
 }
+
 
 .carousel{
     margin-top: 50px;        
@@ -16,3 +17,4 @@
 /* alineacion al centro */
 .carousel-inner { text-align: center; }
 .carousel .item > img { display: inline-block; }
+
