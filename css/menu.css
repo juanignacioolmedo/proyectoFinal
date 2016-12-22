@@ -61,6 +61,17 @@
   border-color: #18BC9C;
 }
 
+.container-fluid ul li{
+	list-style: none;
+}
+
+.container-fluid h2{
+	text-align: center;
+}
+.container-fluid span{
+	font-weight: bold;
+}
+
 header {
   text-align: center;
   background: #F9F9F9;
